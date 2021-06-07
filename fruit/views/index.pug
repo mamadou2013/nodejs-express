@@ -1,0 +1,26 @@
+doctype html 
+html
+    head
+        title Fruit App 
+        link(rel="stylesheet", href="/styles.css")
+    body 
+        include partials/navbar
+        if fruit.length > 0 
+            div.fruits 
+                each item in fruit 
+                    div.single-fruit 
+                        img(src=`${item.picture}`, alt="", srcset="")
+                        div.rating 
+                            h5 Rating 
+                        div.name 
+                            h5=item.name
+                        div.price 
+                            h5='price: '+item.price+' cedis'
+                        div.operation 
+                        button(type="submit" class="buy")  buy now
+        else 
+            h2 there is no product to display 
+                 
+        include partials/footer 
+    
+    
